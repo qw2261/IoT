@@ -1,6 +1,6 @@
 # IoT
 
-##Lab配置：
+## Lab配置：
 
 1. [跟随lab配好相关设置](http://www.1zlab.com/wiki/micropython-esp32/)
 2. 在mac上安装picocom
