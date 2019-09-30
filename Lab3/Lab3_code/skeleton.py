@@ -30,50 +30,9 @@ set_mode = 0
 
 ## Set Time Variables
 global set_time_mode
-time_modes = ['YEAR[1]', 'YEAR[2]', 'YEAR[3]', 'YEAR[4]', 'MONTH', 'DAY', 'WEEK_DAY', 'HOUR', 'MIN']
+time_modes = ['YEAR[1]', 'YEAR[2]', 'YEAR[3]', 'YEAR[4]', 'MONTH', 'DAY', 'WEEKDAY', 'HOUR', 'MIN']
 set_time_mode = 0
 time_modes_size = len(time_modes)
-
-
-# def display(text):
-#     '''
-#     First Line: 92, 0
-#     Second Line: 15, 10
-#     Third Line: 30, 25
-#     '''
-#     oled.fill(0)
-
-#     oled.text(text[0][0], text[0][1], text[0][2])
-#     oled.text(text[1][0], text[1][1], text[1][2])
-#     oled.text(text[2][0], text[2][1], text[2][2])
-
-#     print(text[0][0])
-#     print(text[1][0])
-#     print(text[2][0])
-
-#     oled.show()
-
-# def contentGenerate():
-#     content = rtc.datetime()
-
-#     fill_month = ''
-#     fill_day = ''
-#     fill_hour = ''
-#     fill_minute = ''
-
-#     if len(str(content[1])) == 1:
-#     	fill_month = '0'
-#     if len(str(content[2])) == 1:
-#     	fill_day = '0'
-#     if len(str(content[4])) == 1:
-#     	fill_hour = '0'
-#     if len(str(content[5])) == 1:
-#     	fill_minute = '0'
-
-#     text1 = str(content[0]) + '-' + fill_month + str(content[1]) + '-' + fill_day + str(content[2]) + '-' + str(week_day[content[3]])
-#     text2 = fill_hour + str(content[4]) + ' : ' + fill_minute + str(content[5])
-
-#     return [[text1, 0, 0], [text2, 15, 10] , ['', 92, 25]]
 
 def display(content, Page, Mark):
 
@@ -97,11 +56,22 @@ def display(content, Page, Mark):
     text1 = str(content[0]) + '-' + fill_month + str(content[1]) + '-' + fill_day + str(content[2]) + '-' + str(week_day[content[3]])
     text2 = fill_hour + str(content[4]) + ' : ' + fill_minute + str(content[5]) + ' : ' + fill_second + str(content[6])
 
+    if len(Mark) >= 7:
+        position_mark = 70
+    elif len(Mark) == 6:
+        position_mark = 75
+    elif len(Mark) == 5:
+        position_mark = 80
+    elif len(Mark) == 4:
+        position_mark = 88
+    else:
+        position_mark = 92
+
     oled.fill(0)
     oled.text(Page, 0, 0)
-    oled.text(Mark, 70, 0)
-    oled.text(text1, 15, 12)
-    oled.text(text2, 20, 27)
+    oled.text(Mark, position_mark, 0)
+    oled.text(text1, 12, 12)
+    oled.text(text2, 20, 25)
     oled.show()
 
 
