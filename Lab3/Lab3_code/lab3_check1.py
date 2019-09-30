@@ -36,7 +36,6 @@ is_add = modes[mode_cur][1]
 set_attr_list = ['YEAR', 'MON', 'DAY', 'WEEK', 'HOUR', 'MIN']
 position = 0
 
-
 ## Date Variables
 big_month = [1, 3, 5, 7, 8, 10, 12]
 week_day = ['S', 'M', 'T', 'W', 'R', 'F', 'SA']
@@ -179,6 +178,7 @@ while True:
 	else:
 		print("OFF SETTING")
 		content = rtc.datetime()
+		init_date = list(content)
 
 
 	if len(str(content[1])) == 1:
