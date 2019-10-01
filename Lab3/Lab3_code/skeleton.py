@@ -410,7 +410,6 @@ def ringDetect():
             checkTimeMatch(each[0], each[1], each[2])
             return True
 
-
 ## Operator Button Activation
 def buttonAOn(line):
     global button
@@ -453,7 +452,10 @@ while True:
         prev_time = time.time()
     print('---------------')
 
+    ## Adjust Lightness Based on Outside Lightness
     oled.contrast((adc0.read() <= 255) * adc0.read() +  (adc0.read() > 255) * 255)
+
+    ## Watch Function Transitions
     transion()
 
     time.sleep_ms(200)
