@@ -3,19 +3,17 @@ import ssd1306
 from machine import RTC
 from machine import Pin
 import time
-from machine import ADC
-
-
-## I2C and OLED Initialization
-i2c = machine.I2C(-1, machine.Pin(5), machine.Pin(4))
-oled = ssd1306.SSD1306_I2C(128, 32, i2c)
-
+import sys
 
 ## Date Variables
 big_month = [1, 3, 5, 7, 8, 10, 12]
 week_day = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
 init_date = [2019, 1, 1, 0, 0, 0, 0, 0]
 
+
+## I2C and OLED Initialization
+i2c = machine.I2C(-1, machine.Pin(5), machine.Pin(4))
+oled = ssd1306.SSD1306_I2C(128, 32, i2c)
 
 ## RTC Intializaion
 rtc = RTC()
@@ -396,7 +394,7 @@ def transion():
     elif state == 'SET_ALARM':
         setAlarmTransition()
 
-## Alarm Ring to work
+## Ring to work
 def checkTimeMatch(hour_to_match, minute_to_match, weekday_to_match):
     current = rtc.datetime()
     if weekday_to_match[current[3]] and hour_to_match == current[4] and minute_to_match == current[5]:
@@ -410,8 +408,6 @@ def ringDetect():
             checkTimeMatch(each[0], each[1], each[2])
             return True
 
-
-## Operator Button Activation
 def buttonAOn(line):
     global button
     button = 'A'
@@ -428,7 +424,8 @@ def buttonCOn(line):
 
 
 
-## Operator Button of Watch
+
+
 button_A = Pin(0, Pin.IN, Pin.PULL_UP)
 button_B = Pin(14, Pin.IN, Pin.PULL_UP)
 button_C = Pin(2, Pin.IN, Pin.PULL_UP)
@@ -436,11 +433,6 @@ button_C = Pin(2, Pin.IN, Pin.PULL_UP)
 button_A.irq(handler = buttonAOn, trigger = Pin.IRQ_FALLING)
 button_B.irq(handler = buttonBOn, trigger = Pin.IRQ_FALLING)
 button_C.irq(handler = buttonCOn, trigger = Pin.IRQ_FALLING)
-
-## ADC Button
-adc0 = ADC(0)
-
-
 
 prev_time = time.time()
 while True:
@@ -452,8 +444,5 @@ while True:
         print(ringDetect())
         prev_time = time.time()
     print('---------------')
-
-    oled.contrast((adc0.read() <= 255) * adc0.read() +  (adc0.read() > 255) * 255)
     transion()
-
     time.sleep_ms(200)

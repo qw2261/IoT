@@ -2,7 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="010c1095-4e8d-437a-ae9f-6a6ff44f5abf" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Check1/skeleton-with-time-setting.py.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Check1/skeleton.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab3_check1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab3_check1.py 1.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab3_check1.py 2.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab3_check1.py 3.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab3_check1.py 4.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab3_check2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab3_check3.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/skeleton.py" beforeDir="false" afterPath="$PROJECT_DIR$/skeleton.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -13,16 +21,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lab3_check1.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/skeleton.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+            <state relative-caret-position="482">
+              <caret line="429" lean-forward="true" selection-start-line="429" selection-end-line="429" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -123,8 +126,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/skeleton.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+        <state relative-caret-position="482">
+          <caret line="429" lean-forward="true" selection-start-line="429" selection-end-line="429" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>
