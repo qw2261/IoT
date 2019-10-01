@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="010c1095-4e8d-437a-ae9f-6a6ff44f5abf" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/skeleton.py" beforeDir="false" afterPath="$PROJECT_DIR$/skeleton.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ssd1306.mpy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ssd1306.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,7 +16,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/skeleton.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="621">
+            <state relative-caret-position="909">
               <caret line="457" column="33" selection-start-line="457" selection-start-column="33" selection-end-line="457" selection-end-column="33" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
@@ -117,7 +118,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/skeleton.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="621">
+        <state relative-caret-position="909">
           <caret line="457" column="33" selection-start-line="457" selection-start-column="33" selection-end-line="457" selection-end-column="33" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
