@@ -3,17 +3,20 @@ import ssd1306
 from machine import RTC
 from machine import Pin
 import time
+from machine import ADC
 import sys
+
+
+## I2C and OLED Initialization
+i2c = machine.I2C(-1, machine.Pin(5), machine.Pin(4))
+oled = ssd1306.SSD1306_I2C(128, 32, i2c)
+
 
 ## Date Variables
 big_month = [1, 3, 5, 7, 8, 10, 12]
 week_day = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
 init_date = [2019, 1, 1, 0, 0, 0, 0, 0]
 
-
-## I2C and OLED Initialization
-i2c = machine.I2C(-1, machine.Pin(5), machine.Pin(4))
-oled = ssd1306.SSD1306_I2C(128, 32, i2c)
 
 ## RTC Intializaion
 rtc = RTC()
@@ -425,7 +428,7 @@ def buttonCOn(line):
 
 
 
-
+## Operator Button of Watch
 button_A = Pin(0, Pin.IN, Pin.PULL_UP)
 button_B = Pin(14, Pin.IN, Pin.PULL_UP)
 button_C = Pin(2, Pin.IN, Pin.PULL_UP)
@@ -433,6 +436,11 @@ button_C = Pin(2, Pin.IN, Pin.PULL_UP)
 button_A.irq(handler = buttonAOn, trigger = Pin.IRQ_FALLING)
 button_B.irq(handler = buttonBOn, trigger = Pin.IRQ_FALLING)
 button_C.irq(handler = buttonCOn, trigger = Pin.IRQ_FALLING)
+
+## ADC
+adc0 = ADC(0)
+
+
 
 prev_time = time.time()
 while True:
@@ -442,6 +450,10 @@ while True:
     print(alarms[2])
     if time.time() - prev_time > 50:
         print(ringDetect())
+        prev_time = time.time()
     print('---------------')
+
+    oled.contrast((adc0.read() <= 255) * adc0.read() +  (adc0.read() > 255) * 255)
     transion()
+
     time.sleep_ms(200)
