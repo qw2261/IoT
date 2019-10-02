@@ -1,0 +1,1134 @@
+<!DOCTYPE html>
+<!-- saved from url=(0068)https://learn.adafruit.com/micropython-hardware-spi-devices?view=all -->
+<html lang="en-US" prefix="og: http://ogp.me/ns#" class="js-ready"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<link rel="mask-icon" href="https://learn.adafruit.com/assets/adafruit_favicon-d77f206e6cc65b40101b6e5b8987f7c35cb6a283ea73c0adad50c37f7347c61a.svg" color="#000000">
+<link rel="shortcut icon" type="image/x-icon" href="https://learn.adafruit.com/assets/favicon-0c79bd4bc582e6d4cf3afe417bd1e28120527c09d92c08a6464690c5bf6b85f4.ico">
+<title>Overview | MicroPython Hardware: SPI Devices | Adafruit Learning System</title>
+<meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="qWFspo2/XsH33rgjSq5utrBng5+3cC3ECLpu7tJCkno5ZbkjYXPysEI4ZRozklgKBoU3GgXPcSDXNyIWGNTWHw==">
+<link rel="alternate" type="application/atom+xml" title="ATOM" href="https://learn.adafruit.com/feed">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="https://learn.adafruit.com/feed.rss">
+<link rel="stylesheet" media="screen" href="./Overview _ MicroPython Hardware_ SPI Devices _ Adafruit Learning System_files/application-9317e60ba3959489cd206fb61d31e175f5e66610c16bbbbfc138d9bfb578997a.css" data-turbolinks-track="reload">
+<script type="text/javascript" src="./Overview _ MicroPython Hardware_ SPI Devices _ Adafruit Learning System_files/308175db61"></script><script src="./Overview _ MicroPython Hardware_ SPI Devices _ Adafruit Learning System_files/nr-1130.min.js"></script><script type="text/javascript" async="" src="./Overview _ MicroPython Hardware_ SPI Devices _ Adafruit Learning System_files/ec.js"></script><script type="text/javascript" async="" src="./Overview _ MicroPython Hardware_ SPI Devices _ Adafruit Learning System_files/analytics.js"></script><script src="./Overview _ MicroPython Hardware_ SPI Devices _ Adafruit Learning System_files/js"></script>
+<script type="text/javascript">
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  </script>
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+<meta name="turbolinks-cache-control" content="no-cache">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<script>window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"308175db61","applicationID":"54271218","transactionName":"cVZXRUFeWghRShtEVlVcSh5AWVkT","queueTime":1,"applicationTime":412,"agent":""}</script>
+<script>window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1130.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+<meta name="guide-title" content="MicroPython Hardware: SPI Devices">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@adafruit">
+<meta name="twitter:title" content="MicroPython Hardware: SPI Devices">
+<meta name="twitter:description" content="Talk to SPI devices with MicroPython!">
+<meta name="twitter:image:src" content="https://cdn-learn.adafruit.com/guides/images/000/001/441/medium800/IMG_5162.jpg">
+<meta name="twitter:domain" content="https://learn.adafruit.com">
+<meta property="og:title" content="MicroPython Hardware: SPI Devices">
+<meta property="og:description" content="Learn how to talk to SPI, serial peripheral interface, devices using MicroPython boards.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://cdn-learn.adafruit.com/guides/images/000/001/441/medium800/IMG_5162.jpg">
+<meta property="og:url" content="https://learn.adafruit.com/micropython-hardware-spi-devices/overview">
+<meta property="og:site_name" content="Adafruit Learning System">
+<script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "WebSite",
+        "url": "https://learn.adafruit.com/micropython-hardware-spi-devices/overview",
+        "name": "MicroPython Hardware: SPI Devices",
+        "description": "Learn how to talk to SPI, serial peripheral interface, devices using MicroPython boards.",
+        "publisher": "Adafruit",
+        "datePublished": "2016-09-09T12:09:14-04:00",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://learn.adafruit.com/search?q={search_term}",
+          "query-input": "required name=search_term"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Tony DiCola"
+        }
+      }
+    </script>
+<!--[if lte IE 9]>
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+  <![endif]-->
+<script>
+    window.rails_env = 'production';
+  </script>
+<script src="./Overview _ MicroPython Hardware_ SPI Devices _ Adafruit Learning System_files/application-7be21d8c2a4c9002d5cc.js" data-turbolinks-track="reload"></script>
+<script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "WebSite",
+      "url": "https://learn.adafruit.com/",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://learn.adafruit.com/search?q={search_term}",
+        "query-input": "required name=search_term"
+      }
+    }
+  </script>
+<style id="fit-vids-style">.fluid-width-video-wrapper{width:100%;position:relative;padding:0;}.fluid-width-video-wrapper iframe,.fluid-width-video-wrapper object,.fluid-width-video-wrapper embed {position:absolute;top:0;left:0;width:100%;height:100%;}</style></head>
+<body class="application pages show">
+
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PRPXBQ6"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<div id="outer-wrapper">
+<div id="inner-wrapper">
+<div id="messaging-wrapper" data-load="https://www.adafruit.com/api/multi_message.php"></div>
+<header id="adafruit-header">
+<div id="small-header">
+<div class="first-row">
+<div class="row-content">
+<a id="small-header-menu-button" class="menu-link" href="https://learn.adafruit.com/micropython-hardware-spi-devices?view=all#small-header-nav">
+<i class="fa fa-bars"> </i>
+</a>
+<div class="small-header-logo">
+<a href="https://www.adafruit.com/">
+<img id="small-logo" height="50" width="50" alt="Adafruit Logo" title="Happy Halloween!" src="./Overview _ MicroPython Hardware_ SPI Devices _ Adafruit Learning System_files/adafruit_logo_small.png">
+</a> </div>
+<a class="small-header-cart" href="https://www.adafruit.com/shopping_cart">
+<span class="small-cart-count">0</span>
+<i class="fa fa-shopping-cart"></i>
+</a> </div>
+</div>
+<div class="second-row">
+<div id="small-search-wrapper">
+<div id="small-search-inner-wrapper">
+<form action="https://learn.adafruit.com/search" method="get">
+<label for="mobile-search" style="display:none;">Search</label>
+<input id="mobile-search" type="text" name="q" placeholder="Search Adafruit">
+<i class="fa fa-search"></i>
+</form>
+</div>
+</div>
+</div>
+<nav id="small-header-nav">
+<div class="block">
+<ul>
+<li>
+<a href="https://www.adafruit.com/categories">SHOP</a>
+</li>
+<li>
+<a href="https://learn.adafruit.com/">LEARN</a>
+</li>
+<li>
+<a href="https://blog.adafruit.com/">BLOG</a>
+</li>
+<li>
+<a href="https://forums.adafruit.com/">FORUMS</a>
+</li>
+<li>
+<a href="https://www.youtube.com/adafruit">VIDEOS</a>
+</li>
+<li>
+<a href="https://io.adafruit.com/">IO</a>
+</li>
+<li>
+<a href="https://learn.adafruit.com/users/sign_in">SIGN IN</a>
+</li>
+<li>
+<a class="close-btn" id="small-nav-close-button" href="https://learn.adafruit.com/micropython-hardware-spi-devices?view=all#top">CLOSE MENU</a>
+</li>
+</ul>
+</div>
+</nav>
+</div>
+<div id="large-header">
+<div class="first-row">
+<div class="row-content">
+<ul class="application-links">
+<li><a href="https://www.adafruit.com/">Shop</a></li>
+<li class="selected"><a href="https://learn.adafruit.com/">Learn</a></li>
+<li><a href="https://blog.adafruit.com/">Blog</a></li>
+<li><a href="https://forums.adafruit.com/">Forums</a></li>
+<li><a href="https://www.youtube.com/adafruit">Videos</a></li>
+<li><a href="https://www.adabox.com/">Adabox</a></li>
+<li><a href="https://io.adafruit.com/">IO</a></li>
+</ul>
+<div id="account">
+<span class="sign-out"><a href="https://learn.adafruit.com/users/sign_in">Sign In</a></span>
+<div class="cart">
+<a href="https://www.adafruit.com/shopping_cart">
+<i class="fa fa-shopping-cart"></i> 0
+</a> </div>
+</div>
+</div>
+</div>
+<div class="second-row">
+<div class="row-content">
+<div class="left-content">
+<div id="logo">
+<a href="https://www.adafruit.com/">
+<img alt="Adafruit Logo" title="Happy Halloween!" src="./Overview _ MicroPython Hardware_ SPI Devices _ Adafruit Learning System_files/adafruit_logo_small.png">
+</a> </div>
+<ul class="main-nav-links">
+<li class="dropdown with-overlay">
+<div class="dropdown-label">Explore &amp; Learn</div>
+<div class="dropdown-container">
+<div class="dropdown-content">
+<div class="flyouts">
+<div class="flyout">
+<div class="container">
+<div class="flyout-content row">
+<div class="column col-lg-6 col-md-6 col-sm-6">
+<div class="title categories">
+GUIDE CATEGORIES <br class="hidden-lg"><a href="https://learn.adafruit.com/search">(SEE ALL 2013)</a>
+</div>
+<div class="row">
+<div class="col-lg-6 col-md-6 col-sm-6">
+<ul class="links categories">
+<li><a href="https://learn.adafruit.com/category/adabox">ADABOX (58)</a></li>
+<li><a href="https://learn.adafruit.com/category/adafruit-products">ADAFRUIT PRODUCTS (315)</a></li>
+<li><a href="https://learn.adafruit.com/category/arduino">ARDUINO COMPATIBLES (410)</a></li>
+<li><a href="https://learn.adafruit.com/category/breakout-boards">BREAKOUT BOARDS (167)</a></li>
+<li><a href="https://learn.adafruit.com/category/circuit-playground">CIRCUIT PLAYGROUND (269)</a></li>
+<li><a href="https://learn.adafruit.com/category/circuitpython">CIRCUITPYTHON (233)</a></li>
+<li><a href="https://learn.adafruit.com/category/collins-lab">COLLIN'S LAB (7)</a></li>
+<li><a href="https://learn.adafruit.com/category/components">COMPONENTS (113)</a></li>
+<li><a href="https://learn.adafruit.com/category/community-support">COMMUNITY SUPPORT (27)</a></li>
+<li><a href="https://learn.adafruit.com/category/customer-projects">CUSTOMER &amp; PARTNER PROJECTS (38)</a></li>
+<li><a href="https://learn.adafruit.com/category/development-boards">DEVELOPMENT BOARDS (57)</a></li>
+<li><a href="https://learn.adafruit.com/category/educators">EDUCATORS (53)</a></li>
+<li><a href="https://learn.adafruit.com/category/el">EL WIRE/TAPE/PANEL (13)</a></li>
+<li><a href="https://learn.adafruit.com/category/feather">FEATHER (203)</a></li>
+<li><a href="https://learn.adafruit.com/category/hacks">HACKS (68)</a></li>
+<li><a href="https://learn.adafruit.com/category/internet-of-things-iot">INTERNET OF THINGS - IOT (217)</a></li>
+<li><a href="https://learn.adafruit.com/category/lcds-and-displays">LCDS &amp; DISPLAYS (249)</a></li>
+</ul>
+</div>
+<div class="col-lg-6 col-md-6 col-sm-6">
+<ul class="links categories">
+<li><a href="https://learn.adafruit.com/category/leds">LEDS (393)</a></li>
+<li><a href="https://learn.adafruit.com/category/maker-business">MAKER BUSINESS (34)</a></li>
+<li><a href="https://learn.adafruit.com/category/micro-bit">MICRO:BIT (12)</a></li>
+<li><a href="https://learn.adafruit.com/category/microcontrollers">MICROCONTROLLERS (161)</a></li>
+<li><a href="https://learn.adafruit.com/category/programming">PROGRAMMING (278)</a></li>
+<li><a href="https://learn.adafruit.com/category/projects">PROJECTS (260)</a></li>
+<li><a href="https://learn.adafruit.com/category/raspberry-pi">RASPBERRY PI (369)</a></li>
+<li><a href="https://learn.adafruit.com/category/robotics">ROBOTICS &amp; CNC (88)</a></li>
+<li><a href="https://learn.adafruit.com/category/sensors">SENSORS (394)</a></li>
+<li><a href="https://learn.adafruit.com/category/tools">TOOLS (70)</a></li>
+<li><a href="https://learn.adafruit.com/category/wearables">WEARABLES (244)</a></li>
+<li><a href="https://learn.adafruit.com/category/3d-printing">3D PRINTING (324)</a></li>
+<li><a href="https://learn.adafruit.com/category/crickit">CRICKIT (53)</a></li>
+<li><a href="https://learn.adafruit.com/category/makecode">MAKECODE (160)</a></li>
+<li><a href="https://learn.adafruit.com/category/trellis">TRELLIS (33)</a></li>
+<li><a href="https://learn.adafruit.com/category/machine-learning">MACHINE LEARNING (3)</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="column col-lg-3 col-md-3 col-sm-3">
+<div class="title new">
+NEW GUIDES <br class="hidden-lg"><a href="https://learn.adafruit.com/guides/latest">(SEE ALL 101)</a>
+</div>
+<ul class="links new">
+<li>
+<a href="https://learn.adafruit.com/upgrading-esp32-firmware"><img src="./Overview _ MicroPython Hardware_ SPI Devices _ Adafruit Learning System_files/image.png" alt="Upgrading ESP32 Firmware"></a>
+<a href="https://learn.adafruit.com/upgrading-esp32-firmware" class="name">UPGRADING ESP32 FIRMWARE</a>
+<div class="clear"></div>
+</li>
+<li>
+<a href="https://learn.adafruit.com/spruce-up-a-costume-with-monster-m4sk-eyes-and-voice"><img src="./Overview _ MicroPython Hardware_ SPI Devices _ Adafruit Learning System_files/goatskull2.gif" alt="Spruce Up a Costume with MONSTER M4SK Eyes and Voice"></a>
+<a href="https://learn.adafruit.com/spruce-up-a-costume-with-monster-m4sk-eyes-and-voice" class="name">SPRUCE UP A COSTUME WITH MONSTER M4SK EYES AND VOICE</a>
+<div class="clear"></div>
+</li>
+<li>
+<a href="https://learn.adafruit.com/hand-puppet-voice-and-eye-upgrade-with-monster-m4sk"><img src="./Overview _ MicroPython Hardware_ SPI Devices _ Adafruit Learning System_files/raptor_beauty.jpg" alt="Velociraptor Voice and Eye Upgrade with MONSTER M4SK"></a>
+<a href="https://learn.adafruit.com/hand-puppet-voice-and-eye-upgrade-with-monster-m4sk" class="name">VELOCIRAPTOR VOICE AND EYE UPGRADE WITH MONSTER M4SK</a>
+<div class="clear"></div>
+</li>
+<li>
+<a href="https://learn.adafruit.com/circuitpython-on-any-computer-with-ft232h"><img src="./Overview _ MicroPython Hardware_ SPI Devices _ Adafruit Learning System_files/20190927_150421.gif" alt="CircuitPython Libraries on any Computer with FT232H"></a>
+<a href="https://learn.adafruit.com/circuitpython-on-any-computer-with-ft232h" class="name">CIRCUITPYTHON LIBRARIES ON ANY COMPUTER WITH FT232H</a>
+<div class="clear"></div>
+</li>
+</ul>
+</div>
+<div class="column col-lg-3 col-md-3 col-sm-3">
+<div class="title featured">
+FEATURED GUIDES <br class="hidden-lg"><a href="https://learn.adafruit.com/guides/featured">(SEE ALL 41)</a>
+</div>
+<ul class="links featured">
+<li>
+<a href="https://learn.adafruit.com/all-about-batteries"><img src="./Overview _ MicroPython Hardware_ SPI Devices _ Adafruit Learning System_files/Batteries.jpg" alt="All About Batteries"></a>
+<a href="https://learn.adafruit.com/all-about-batteries" class="name">ALL ABOUT BATTERIES</a>
+<div class="clear"></div>
+</li>
+<li>
+<a href="https://learn.adafruit.com/automatic-cat-treat-dispenser"><img src="./Overview _ MicroPython Hardware_ SPI Devices _ Adafruit Learning System_files/hero.gif" alt="Automatic Cat Treat Dispenser"></a>
+<a href="https://learn.adafruit.com/automatic-cat-treat-dispenser" class="name">AUTOMATIC CAT TREAT DISPENSER</a>
+<div class="clear"></div>
+</li>
+<li>
+<a href="https://learn.adafruit.com/neopixel-led-harness-bra"><img src="./Overview _ MicroPython Hardware_ SPI Devices _ Adafruit Learning System_files/ezgif.com-gif-maker_(1).gif" alt="LED Harness Bra"></a>
+<a href="https://learn.adafruit.com/neopixel-led-harness-bra" class="name">LED HARNESS BRA</a>
+<div class="clear"></div>
+</li>
+<li>
+<a href="https://learn.adafruit.com/cartoon-network-and-make-code-rose-quartz-shield-umbrella"><img src="./Overview _ MicroPython Hardware_ SPI Devices _ Adafruit Learning System_files/rose_quartz_umbrella.gif" alt="Cartoon Network and Make Code - Rose Quartz Shield Umbrella"></a>
+<a href="https://learn.adafruit.com/cartoon-network-and-make-code-rose-quartz-shield-umbrella" class="name">CARTOON NETWORK AND MAKE CODE - ROSE QUARTZ SHIELD UMBRELLA</a>
+<div class="clear"></div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="right-content">
+<div class="search-wrapper">
+<form action="https://learn.adafruit.com/search" method="get">
+<label for="search" style="display:none;">Search</label>
+<input id="search" type="text" name="q" autocomplete="off" data-page="" data-app-id="W9DMM4OTH0" data-app-key="e613bcda3453b9ef887e2724362f9e57" data-app-index="learn_guides_production" data-app-uri="https://learn.adafruit.com">
+<i class="fa fa-search"></i>
+<input type="submit" style="visibility: hidden; position: fixed;">
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<div id="main-content">
+<div id="page-wrapper" class="single-page">
+<div class="notice-banner">
+<i class="fa fa-info-circle" aria-hidden="true"></i>
+This tutorial may be outdated. It is no longer recommended for beginners, and may need modifications to code or hardware that is not indicated in the tutorial.
+</div>
+<article id="content-wrapper" class="double-sidebar-layout" data-page-id="8134" data-guide-id="1441">
+<div class="content">
+<div class="sidebar-left-wrapper">
+<div class="sidebar-left-content affix" data-clampedwidth=".sidebar-left-wrapper" style="width: 262.5px;">
+<nav class="sidebar-left">
+<div class="title-bar">
+<div class="image-container">
+<img class="image-preview" data-error="/assets/missing%2Fmissing.png" src="./Overview _ MicroPython Hardware_ SPI Devices _ Adafruit Learning System_files/IMG_5162.jpg">
+</div>
+<div class="title">
+<h1><a href="https://learn.adafruit.com/micropython-hardware-spi-devices/overview">MicroPython Hardware: SPI Devices</a></h1>
+<span class="page-tagline"><a href="https://learn.adafruit.com/micropython-hardware-spi-devices/overview">Talk to SPI devices with MicroPython!</a></span>
+</div>
+</div>
+<ul class="page-parent nav">
+<li class="parent">
+<a href="https://learn.adafruit.com/micropython-hardware-spi-devices?view=all#overview" class="published">Overview</a>
+</li>
+<li class="parent active">
+<a href="https://learn.adafruit.com/micropython-hardware-spi-devices?view=all#spi-master" class="published">SPI Master</a>
+</li>
+<li class="parent  ">
+<a href="https://learn.adafruit.com/micropython-hardware-spi-devices?view=all#spi-slave" class="published">SPI Slave</a>
+</li>
+<li class="single-page-spacer"></li>
+ <li class="single-page-link ">
+<a href="https://learn.adafruit.com/micropython-hardware-spi-devices/featured_products">Featured Products</a>
+</li>
+<li class="single-page-link"><a href="https://learn.adafruit.com/micropython-hardware-spi-devices">Multiple Pages</a></li>
+<li><a href="https://cdn-learn.adafruit.com/downloads/pdf/micropython-hardware-spi-devices.pdf?timestamp=1569959406">Download PDF</a></li>
+</ul>
+</nav>
+<header class="sidebar-meta hidden-xs">
+<h4>Contributors</h4>
+<div><a href="https://learn.adafruit.com/users/tdicola">Tony DiCola</a></div>
+</header>
+</div>
+</div>
+<div class="main-content">
+<div id="categories">
+<span class="category child-category">
+<a href="https://learn.adafruit.com/category/microcontrollers">MICROCONTROLLERS</a>
+<span class="category-link-spacer">/</span>
+<a href="https://learn.adafruit.com/category/micropython">MICROPYTHON</a>
+</span>
+<span class="category child-category">
+<a href="https://learn.adafruit.com/category/programming">PROGRAMMING</a>
+<span class="category-link-spacer">/</span>
+<a href="https://learn.adafruit.com/category/micropython-slash-circuitpython">MICROPYTHON / CIRCUITPYTHON</a>
+</span>
+<span id="guide-favorite">
+<a class="favorites-link category right red" title="" data-toggle="tooltip" data-placement="left" data-remote="true" rel="nofollow" data-method="post" href="https://learn.adafruit.com/guides/1441/favorites.js" data-original-title="Favorite this guide?">
+<i class="fa fa-heart-o"></i>
+</a></span>
+</div>
+<div class="page-title-wrapper">
+<h1 class="headline">
+<span id="overview">Overview</span>
+</h1>
+<div class="author">by
+<a href="https://learn.adafruit.com/users/tdicola">
+<span class="name">Tony DiCola</span>
+</a> </div>
+</div>
+<div class="page-content all-page-view-content">
+<div class="">
+<div class="element row-fluid build-alert">
+<div class="alert">
+<i class="fa fa-exclamation-circle"></i>
+<span class="alert-content">The examples in this guide are no longer supported and may not work. We are only supporting CircuitPython on our boards. For more information about using CircuitPython, check out the CircuitPython Essentials: <a href="https://learn.adafruit.com/circuitpython-essentials/circuitpython-essentials">https://learn.adafruit.com/circuitpython-essentials/circuitpython-essentials</a></span>
+</div>
+</div>
+<div class="element element row-fluid build-alert alert-warning">
+<div class="alert">
+<i class="fa fa-exclamation-circle"></i>
+<span class="alert-content">Note this guide was written for MicroPython.org firmware and not Adafruit CircuitPython firmware.</span>
+</div>
+</div>
+<div class="row-fluid build-image">
+<a href="https://learn.adafruit.com/assets/35633">
+<img class="35633-asset img-responsive" srcset="https://cdn-learn.adafruit.com/assets/assets/000/035/633/medium260/microcontrollers_IMG_5162.jpg?1473315948 260w,
+               https://cdn-learn.adafruit.com/assets/assets/000/035/633/medium640/microcontrollers_IMG_5162.jpg?1473315948 640w,
+               https://cdn-learn.adafruit.com/assets/assets/000/035/633/medium800/microcontrollers_IMG_5162.jpg?1473315948 800w,
+               https://cdn-learn.adafruit.com/assets/assets/000/035/633/large1024/microcontrollers_IMG_5162.jpg?1473315948 1024w" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 65vw, (max-width: 1365px) 47vw, 750px" src="./Overview _ MicroPython Hardware_ SPI Devices _ Adafruit Learning System_files/microcontrollers_IMG_5162.jpg" alt="microcontrollers_IMG_5162.jpg">
+<span class="image-expand"><i class="fa fa-search-plus"></i></span>
+</a> </div>
+<div class="build-embed">
+<div class="build-video"><div class="fluid-width-video-wrapper" style="padding-top: 56.25%;"><iframe src="./Overview _ MicroPython Hardware_ SPI Devices _ Adafruit Learning System_files/jkvIszP5WBo.html" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" name="fitvid0"></iframe></div></div>
+</div>
+<div class="row-fluid build-text">
+<p><a href="https://en.wikipedia.org/wiki/Serial_Peripheral_Interface_Bus">Serial peripheral interface</a>, or SPI, is a protocol&nbsp;for&nbsp;two&nbsp;devices to send and receive data. &nbsp;For example a LCD display might use a SPI interface to receive pixel data, or a temperature sensor might use SPI to send readings to a microcontroller. &nbsp;With MicroPython you can use the SPI protocol to talk to devices and write scripts that interface with interesting hardware!</p>
+<p>This guide will explore how to use SPI with MicroPython. &nbsp;In particular MicroPython on the ESP8266 will be used to talk to a simple SPI device, the <a href="https://www.adafruit.com/product/269">MAX31855 thermocouple temperature sensor</a>. &nbsp;You'll learn how to create a SPI interface,&nbsp;and send and receive data over that interface. &nbsp;With just the basics of sending and receiving SPI data&nbsp;you can start to write your own MicroPython code that interacts with other interesting SPI devices!</p>
+<p>Before you get started you'll want to be familiar with the basics of using MicroPython by reading these guides:</p>
+<ul>
+<li><a href="https://learn.adafruit.com/micropython-basics-what-is-micropython/overview">MicroPython Basics: What is MicroPython?</a></li>
+<li><a href="https://learn.adafruit.com/micropython-basics-how-to-load-micropython-on-a-board">MicroPython Basics: How to Load MicroPython on a Board</a></li>
+<li><a href="https://learn.adafruit.com/micropython-basics-blink-a-led/overview">MicroPython Basics: Blink a LED</a></li>
+<li><a href="https://learn.adafruit.com/micropython-basics-load-files-and-run-code/overview">MicroPython Basics: Load Files &amp; Run Code</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="page-title-wrapper">
+<h1 class="headline">
+<span id="spi-master">SPI Master</span>
+</h1>
+<div class="author">by
+<a href="https://learn.adafruit.com/users/tdicola">
+<span class="name">Tony DiCola</span>
+</a> </div>
+</div>
+<div class="page-content all-page-view-content">
+<div class="">
+<div class="element row-fluid build-alert">
+<div class="alert">
+<i class="fa fa-exclamation-circle"></i>
+<span class="alert-content">The examples in this guide are no longer supported and may not work. We are only supporting CircuitPython on our boards. For more information about using CircuitPython, check out the CircuitPython Essentials: <a href="https://learn.adafruit.com/circuitpython-essentials/circuitpython-essentials">https://learn.adafruit.com/circuitpython-essentials/circuitpython-essentials</a></span>
+</div>
+</div>
+<div class="row-fluid build-text">
+<p>With the SPI protocol there's an important distinction between the 'master' device which&nbsp;controls the communication and 'slave' devices that send and receive data with the master. &nbsp;In almost all&nbsp;cases the microcontroller is the master device that controls the SPI communication. &nbsp;In this example we'll look at SPI master mode where a&nbsp;MicroPython board acts as the master to control the SPI communication with other devices.</p>
+<p>In most cases a SPI connection is made using at least four wires:</p>
+<ul>
+<li>
+<strong>Clock</strong>,&nbsp;the SPI master device toggles this line high and low to tell connected devices when they should send and receive bits of data.</li>
+<li>
+<strong>MOSI (master output, slave input)</strong>, this line sends bits of data from the master device to other connected devices. &nbsp;Think of this as the data output from the master device.</li>
+<li>
+<strong>MISO (master input, slave output)</strong>, this line sends bits of data from connected devices to the master device. &nbsp;Think of this as the data output from the connected devices.</li>
+<li>
+<strong>Chip select</strong>, although not required most connected devices have a chip select, or CS, line. &nbsp;This line is driven high or low by the SPI master to tell the connected device that it should listen for SPI commands. &nbsp;As long as each device has a separate chip select line you can usually share the clock, MOSI, and MISO lines of a SPI connection between multiple devices.</li>
+</ul>
+<p>Be aware with MicroPython there are some differences in how each board implements the API for SPI master mode. &nbsp;As always consult each board's documentation:</p>
+<ul>
+<li><a href="http://docs.micropython.org/en/latest/esp8266/esp8266/quickref.html#software-spi-bus">MicroPython ESP8266 SPI documentation</a></li>
+<li><a href="https://docs.micropython.org/en/latest/pyboard/pyboard/quickref.html#spi-bus">MicroPython pyboard SPI documentation</a></li>
+<ul>
+<li>The pyboard currently uses an older pyb module instead of the machine module for the SPI interface. &nbsp;You also need to explicitly tell the SPI API that you're creating a SPI master device connection. &nbsp;The functions for sending and receiving data have slightly different names like recv instead of&nbsp;read and send instead of write.</li>
+</ul>
+<li><a href="http://docs.micropython.org/en/latest/wipy/wipy/quickref.html#spi-bus">MicroPython WiPy SPI documentation</a></li>
+<ul>
+<li>The WiPy SPI API&nbsp;also&nbsp;requires you&nbsp;tell it you're creating a SPI master device connection.</li>
+</ul>
+<li><a href="https://microbit-micropython.readthedocs.io/en/latest/spi.html">MicroPython micro:bit SPI documentation</a></li>
+<ul>
+<li>The micro:bit uses a SPI mode parameter to set polarity and clock phase instead of explicit parameters for each value. &nbsp;Use the <a href="https://microbit-micropython.readthedocs.io/en/latest/spi.html#microbit.spi.init">table shown in the documentation</a> to understand which mode is necessary for the appropriate polarity and clock phase of your connection.</li>
+</ul>
+</ul>
+</div>
+<div class="element element row-fluid build-alert alert-warning">
+<div class="alert">
+<i class="fa fa-exclamation-circle"></i>
+<span class="alert-content">Note SPI protocol support across MicroPython boards is under development and might change over time. Be sure to check your board's documentation to find the latest information on SPI usage!</span>
+</div>
+</div>
+<div class="row-fluid build-text">
+<p>For this example we'll look at how to read data from a MAX31855 thermocouple sensor connected to an ESP8266 running&nbsp;MicroPython. &nbsp;The MAX31855 sensor has a very simple SPI interface that's easy to read temperature data with a few commands.</p>
+<p>To follow this example you'll need the following parts:</p>
+<ul>
+<li>
+<strong>ESP8266 board running MicroPython</strong>, for example the <a href="https://www.adafruit.com/product/2821">Feather HUZZAH ESP8266</a>.</li>
+<li><strong><a href="https://www.adafruit.com/product/269">MAX31855 thermocouple sensor breakout</a>&nbsp;and a <a href="https://www.adafruit.com/products/270">compatible thermocouple</a>.</strong></li>
+<li><strong><a href="https://www.adafruit.com/products/64">Breadboard</a> &amp; <a href="https://www.adafruit.com/products/153">jumper wires</a>.</strong></li>
+</ul>
+<p>Connect the components as follows:</p>
+</div>
+<div class="row-fluid build-image">
+<a href="https://learn.adafruit.com/assets/35621">
+<img class="35621-asset img-responsive" srcset="https://cdn-learn.adafruit.com/assets/assets/000/035/621/medium260/microcontrollers_micropython_mcp31855_bb.png?1473304343 260w,
+               https://cdn-learn.adafruit.com/assets/assets/000/035/621/medium640/microcontrollers_micropython_mcp31855_bb.png?1473304343 640w,
+               https://cdn-learn.adafruit.com/assets/assets/000/035/621/medium800/microcontrollers_micropython_mcp31855_bb.png?1473304343 800w,
+               https://cdn-learn.adafruit.com/assets/assets/000/035/621/large1024/microcontrollers_micropython_mcp31855_bb.png?1473304343 1024w" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 65vw, (max-width: 1365px) 47vw, 750px" src="./Overview _ MicroPython Hardware_ SPI Devices _ Adafruit Learning System_files/microcontrollers_micropython_mcp31855_bb.png" alt="microcontrollers_micropython_mcp31855_bb.png">
+<span class="image-expand"><i class="fa fa-search-plus"></i></span>
+</a> </div>
+<div class="row-fluid build-image">
+<a href="https://learn.adafruit.com/assets/35632">
+<img class="35632-asset img-responsive" srcset="https://cdn-learn.adafruit.com/assets/assets/000/035/632/medium260/microcontrollers_IMG_5162.jpg?1473315906 260w,
+               https://cdn-learn.adafruit.com/assets/assets/000/035/632/medium640/microcontrollers_IMG_5162.jpg?1473315906 640w,
+               https://cdn-learn.adafruit.com/assets/assets/000/035/632/medium800/microcontrollers_IMG_5162.jpg?1473315906 800w,
+               https://cdn-learn.adafruit.com/assets/assets/000/035/632/large1024/microcontrollers_IMG_5162.jpg?1473315906 1024w" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 65vw, (max-width: 1365px) 47vw, 750px" src="./Overview _ MicroPython Hardware_ SPI Devices _ Adafruit Learning System_files/microcontrollers_IMG_5162(1).jpg" alt="microcontrollers_IMG_5162.jpg">
+<span class="image-expand"><i class="fa fa-search-plus"></i></span>
+</a> </div>
+<div class="row-fluid build-text">
+<ul>
+<li>
+<strong>Board ground</strong> to <strong>MAX31855 ground</strong>.</li>
+<li>
+<strong>Board 3.3V output</strong> to <strong>MAX31855 Vin (voltage input)</strong>.</li>
+<li>
+<strong>Board SCK (serial clock, ESP8266 GPIO14)</strong> to <strong>MAX31855 CLK (clock)</strong>.</li>
+<li>
+<strong>Board MI (master input, ESP8266 GPIO12)</strong> to <strong>MAX31855 DO (data output)</strong>.</li>
+<li>
+<strong>Board pin 15</strong> to <strong>MAX31855 CS (chip select)</strong>.</li>
+</ul>
+<p>You'll also want to make sure a thermocouple is connected to the MAX31855 breakout's terminal block. &nbsp;Make sure to use an appropriate thermocouple like a simple K-type thermocouple. &nbsp;Check out <a href="https://learn.adafruit.com/thermocouple/overview">this handy thermocouple guide</a> if you're unfamliar with their usage.</p>
+<p>Although it's not necessary with the MAX31855, if you're using a SPI device that should receive data from the ESP8266 you should connect the board MOSI/MO (master output, ESP8266 GPIO13) to the MOSI or data input line of your device.</p>
+<p>Note the above connections will use the hardware SPI interface on the ESP8266 to talk to the MAX31855 sensor. &nbsp;Hardware SPI uses hardware built in to the microcontroller to talk the SPI protocol. &nbsp;This is useful because the microcontroller can handle all of the SPI communication even at very high speeds (multiple megahertz). &nbsp;However when using hardware SPI you have to use specific clock, MOSI, and MISO pins on the board as shown.</p>
+<p>An alternative to hardware SPI is 'software SPI' which uses any GPIO pins for the clock, MOSI, and MISO lines. &nbsp;This is more flexible than hardware SPI, but it's slower because the SPI protocol is&nbsp;implemented in code instead of special hardware. &nbsp;Most MicroPython&nbsp;boards don't yet support software SPI so it won't be shown in this guide, however be aware the <a href="http://docs.micropython.org/en/latest/esp8266/esp8266/quickref.html#software-spi-bus">MicroPython ESP8266&nbsp;port does support&nbsp;a software SPI interface</a>&nbsp;if you need it.</p>
+</div>
+<div class="row-fluid build-text">
+<h1>
+<div class="anchor-anchor">
+<a href="https://learn.adafruit.com/micropython-hardware-spi-devices?view=all#setup-hardware-spi-connection-2-8" class="anchor-link"><span class="fa fa-link"></span></a><span id="setup-hardware-spi-connection-2-8" class="anchor-link-target"></span><span id="setup-hardware-spi-connection-2-8" class="anchor-link-target"></span>
+</div>Setup Hardware SPI Connection</h1>
+<p>To setup the SPI connection connect to the board's serial or other REPL and run the following commands to import the machine module:</p>
+</div>
+<div class="build-code code-element">
+<div class="download-code">
+<i class="fa fa-cloud-download"></i> Download:
+<a data-turbolinks="false" href="https://learn.adafruit.com/pages/8136/elements/1956823/download">
+file
+</a> <div class="code-copy-container">
+<a href="https://learn.adafruit.com/micropython-hardware-spi-devices?view=all#" class="code-copy-button hidden-xs">Copy Code</a>
+</div>
+</div>
+<pre class="code-text-only" style="display: none;">import machine</pre>
+<pre class="prettyprint
+              
+              linenums
+               prettyprinted" style=""><ol class="linenums"><li class="L0"><span class="kwd">import</span><span class="pln"> machine</span></li></ol></pre>
+</div>
+<div class="row-fluid build-text">
+<p><strong>pyboard note:</strong> The pyboard SPI interface is currently using the older pyb module. <a href="https://docs.micropython.org/en/latest/pyboard/pyboard/quickref.html#spi-bus">Check the pyboard documentation</a> for more details on its usage.</p>
+<p>Next create a SPI interface by running the following command:</p>
+</div>
+<div class="build-code code-element">
+<div class="download-code">
+<i class="fa fa-cloud-download"></i> Download:
+<a data-turbolinks="false" href="https://learn.adafruit.com/pages/8136/elements/1956825/download">
+file
+</a> <div class="code-copy-container">
+<a href="https://learn.adafruit.com/micropython-hardware-spi-devices?view=all#" class="code-copy-button hidden-xs">Copy Code</a>
+</div>
+</div>
+<pre class="code-text-only" style="display: none;">spi = machine.SPI(1, baudrate=5000000, polarity=0, phase=0)</pre>
+<pre class="prettyprint
+              
+              linenums
+               prettyprinted" style=""><ol class="linenums"><li class="L0"><span class="pln">spi </span><span class="pun">=</span><span class="pln"> machine</span><span class="pun">.</span><span class="pln">SPI</span><span class="pun">(</span><span class="lit">1</span><span class="pun">,</span><span class="pln"> baudrate</span><span class="pun">=</span><span class="lit">5000000</span><span class="pun">,</span><span class="pln"> polarity</span><span class="pun">=</span><span class="lit">0</span><span class="pun">,</span><span class="pln"> phase</span><span class="pun">=</span><span class="lit">0</span><span class="pun">)</span></li></ol></pre>
+</div>
+<div class="row-fluid build-text">
+<p><strong>Note this command might fail if you're running a slightly older version of MicroPython ESP8266 firmware!</strong> &nbsp;In particular if you see the following error:</p>
+<p class="p1"><strong><span class="s1">ValueError: no such SPI peripheral</span></strong></p>
+<p class="p1"><span class="s1">Then instead run the command as:</span></p>
+</div>
+<div class="build-code code-element">
+<div class="download-code">
+<i class="fa fa-cloud-download"></i> Download:
+<a data-turbolinks="false" href="https://learn.adafruit.com/pages/8136/elements/1956827/download">
+file
+</a> <div class="code-copy-container">
+<a href="https://learn.adafruit.com/micropython-hardware-spi-devices?view=all#" class="code-copy-button hidden-xs">Copy Code</a>
+</div>
+</div>
+<pre class="code-text-only" style="display: none;">spi = machine.SPI(0, baudrate=5000000, polarity=0, phase=0)</pre>
+<pre class="prettyprint
+              
+              linenums
+               prettyprinted" style=""><ol class="linenums"><li class="L0"><span class="pln">spi </span><span class="pun">=</span><span class="pln"> machine</span><span class="pun">.</span><span class="pln">SPI</span><span class="pun">(</span><span class="lit">0</span><span class="pun">,</span><span class="pln"> baudrate</span><span class="pun">=</span><span class="lit">5000000</span><span class="pun">,</span><span class="pln"> polarity</span><span class="pun">=</span><span class="lit">0</span><span class="pun">,</span><span class="pln"> phase</span><span class="pun">=</span><span class="lit">0</span><span class="pun">)</span></li></ol></pre>
+</div>
+<div class="row-fluid build-image">
+<a href="https://learn.adafruit.com/assets/35623">
+<img class="35623-asset img-responsive" srcset="https://cdn-learn.adafruit.com/assets/assets/000/035/623/medium260/microcontrollers_Screen_Shot_2016-09-07_at_10.53.57_PM.png?1473314063 260w,
+               https://cdn-learn.adafruit.com/assets/assets/000/035/623/medium640/microcontrollers_Screen_Shot_2016-09-07_at_10.53.57_PM.png?1473314063 640w,
+               https://cdn-learn.adafruit.com/assets/assets/000/035/623/medium800/microcontrollers_Screen_Shot_2016-09-07_at_10.53.57_PM.png?1473314063 800w,
+               https://cdn-learn.adafruit.com/assets/assets/000/035/623/large1024/microcontrollers_Screen_Shot_2016-09-07_at_10.53.57_PM.png?1473314063 1024w" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 65vw, (max-width: 1365px) 47vw, 750px" src="./Overview _ MicroPython Hardware_ SPI Devices _ Adafruit Learning System_files/microcontrollers_Screen_Shot_2016-09-07_at_10.53.57_PM.png" alt="microcontrollers_Screen_Shot_2016-09-07_at_10.53.57_PM.png">
+<span class="image-expand"><i class="fa fa-search-plus"></i></span>
+</a> </div>
+<div class="row-fluid build-text">
+<p>The reason for this difference is that the first parameter of the SPI class initializer specifies which SPI interface on the board to use. &nbsp;Older versions of MicroPython ESP8266 used interface 0 for the hardware SPI interface, however later versions (after ~September 2016) used interface 1 for the hardware SPI interface.</p>
+<p><strong>pyboard &amp; WiPy note:</strong> For the pyboard &amp; WiPy their SPI class currently requires an explicit SPI.MASTER parameter in addition to the other parameters above. &nbsp;Check their documentation for more details on the usage.</p>
+<p><strong>micro:bit note:</strong> The micro:bit doesn't use polarity and phase parameters, instead it uses a single mode parameter that implies both polarity and phase. <a href="https://microbit-micropython.readthedocs.io/en/latest/spi.html#microbit.spi.init">Check the micro:bit documentation</a> for more details.</p>
+<p>The other parameters to the initializer control how the SPI interface is configured:</p>
+<ul>
+<li>
+<strong>baudrate</strong> controls the speed of the clock line in hertz.</li>
+<li>
+<strong>polarity</strong> controls the polarity of the clock line, i.e. if it's idle at a&nbsp;low or high level. &nbsp;</li>
+<li>
+<strong>phase</strong> controls the phase of the clock line, i.e. when data is read and written during a clock cycle.</li>
+</ul>
+<p>You'll need to look at your device's datasheet to see what clock speed/baudrate it supports, and what polarity &amp; phase values to specify too. &nbsp;Check out <a href="https://en.wikipedia.org/wiki/Serial_Peripheral_Interface_Bus#Clock_polarity_and_phase">this description of SPI polarity and phase</a> for more details on what they mean, and how to convert from SPI modes (a common way to describe polarity &amp; phase with one number) to explicit polarity &amp; phase values.</p>
+<p>For the MAX31855 thermocouple sensor a polarity &amp; phase of 0 (i.e. SPI mode 0) are necessary to talk to the device, and a baudrate of 5mhz is supported for quickly reading data.</p>
+<p>After initializing the SPI interface you'll need to also setup the chip select line as a s<a href="https://learn.adafruit.com/micropython-hardware-digital-i-slash-o/overview">tandard digital output</a>. &nbsp;Run the following command to make a digital output for the chip select line and set it to a high value:</p>
+</div>
+<div class="build-code code-element">
+<div class="download-code">
+<i class="fa fa-cloud-download"></i> Download:
+<a data-turbolinks="false" href="https://learn.adafruit.com/pages/8136/elements/1956830/download">
+file
+</a> <div class="code-copy-container">
+<a href="https://learn.adafruit.com/micropython-hardware-spi-devices?view=all#" class="code-copy-button hidden-xs">Copy Code</a>
+</div>
+</div>
+<pre class="code-text-only" style="display: none;">cs = machine.Pin(15, machine.Pin.OUT)
+cs.high()</pre>
+<pre class="prettyprint
+              
+              linenums
+               prettyprinted" style=""><ol class="linenums"><li class="L0"><span class="pln">cs </span><span class="pun">=</span><span class="pln"> machine</span><span class="pun">.</span><span class="typ">Pin</span><span class="pun">(</span><span class="lit">15</span><span class="pun">,</span><span class="pln"> machine</span><span class="pun">.</span><span class="typ">Pin</span><span class="pun">.</span><span class="pln">OUT</span><span class="pun">)</span></li><li class="L1"><span class="pln">cs</span><span class="pun">.</span><span class="pln">high</span><span class="pun">()</span></li></ol></pre>
+</div>
+<div class="row-fluid build-image">
+<a href="https://learn.adafruit.com/assets/35631">
+<img class="35631-asset img-responsive" srcset="https://cdn-learn.adafruit.com/assets/assets/000/035/631/medium260/microcontrollers_Screen_Shot_2016-09-07_at_11.02.26_PM.png?1473314576 260w,
+               https://cdn-learn.adafruit.com/assets/assets/000/035/631/medium640/microcontrollers_Screen_Shot_2016-09-07_at_11.02.26_PM.png?1473314576 640w,
+               https://cdn-learn.adafruit.com/assets/assets/000/035/631/medium800/microcontrollers_Screen_Shot_2016-09-07_at_11.02.26_PM.png?1473314576 800w,
+               https://cdn-learn.adafruit.com/assets/assets/000/035/631/large1024/microcontrollers_Screen_Shot_2016-09-07_at_11.02.26_PM.png?1473314576 1024w" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 65vw, (max-width: 1365px) 47vw, 750px" src="./Overview _ MicroPython Hardware_ SPI Devices _ Adafruit Learning System_files/microcontrollers_Screen_Shot_2016-09-07_at_11.02.26_PM.png" alt="microcontrollers_Screen_Shot_2016-09-07_at_11.02.26_PM.png">
+<span class="image-expand"><i class="fa fa-search-plus"></i></span>
+</a> </div>
+<div class="row-fluid build-text">
+<p>For the MAX31855 it will send data only when the chip select line is low. &nbsp;Check your device's datasheet to see if it has a chip select line and how it expects the line to be driven.</p>
+</div>
+<div class="row-fluid build-text">
+<h1>
+<div class="anchor-anchor">
+<a href="https://learn.adafruit.com/micropython-hardware-spi-devices?view=all#read-spi-data-2-19" class="anchor-link"><span class="fa fa-link"></span></a><span id="read-spi-data-2-19" class="anchor-link-target"></span><span id="read-spi-data-2-19" class="anchor-link-target"></span>
+</div>Read SPI Data</h1>
+<p>You can read SPI data using the <strong>read</strong> or <strong>readinto</strong> functions on the SPI interface object. &nbsp;</p>
+<p>For the MAX31855 sensor it has a very simple interface where you read 4 bytes of data (32 bits total) to get the current temperature&nbsp;reading and other sensor state. &nbsp;Remember before the chip will respond it needs to have the chip select line driven low. &nbsp;Run the following commands to toggle chip select low, read 4 bytes, and then set chip select back to a high level:</p>
+</div>
+<div class="build-code code-element">
+<div class="download-code">
+<i class="fa fa-cloud-download"></i> Download:
+<a data-turbolinks="false" href="https://learn.adafruit.com/pages/8136/elements/1956834/download">
+file
+</a> <div class="code-copy-container">
+<a href="https://learn.adafruit.com/micropython-hardware-spi-devices?view=all#" class="code-copy-button hidden-xs">Copy Code</a>
+</div>
+</div>
+<pre class="code-text-only" style="display: none;">cs.low()
+data = spi.read(4)
+cs.high()</pre>
+<pre class="prettyprint
+              
+              linenums
+               prettyprinted" style=""><ol class="linenums"><li class="L0"><span class="pln">cs</span><span class="pun">.</span><span class="pln">low</span><span class="pun">()</span></li><li class="L1"><span class="pln">data </span><span class="pun">=</span><span class="pln"> spi</span><span class="pun">.</span><span class="pln">read</span><span class="pun">(</span><span class="lit">4</span><span class="pun">)</span></li><li class="L2"><span class="pln">cs</span><span class="pun">.</span><span class="pln">high</span><span class="pun">()</span></li></ol></pre>
+</div>
+<div class="row-fluid build-image">
+<a href="https://learn.adafruit.com/assets/35630">
+<img class="35630-asset img-responsive" srcset="https://cdn-learn.adafruit.com/assets/assets/000/035/630/medium260/microcontrollers_Screen_Shot_2016-09-07_at_11.01.48_PM.png?1473314534 260w,
+               https://cdn-learn.adafruit.com/assets/assets/000/035/630/medium640/microcontrollers_Screen_Shot_2016-09-07_at_11.01.48_PM.png?1473314534 640w,
+               https://cdn-learn.adafruit.com/assets/assets/000/035/630/medium800/microcontrollers_Screen_Shot_2016-09-07_at_11.01.48_PM.png?1473314534 800w,
+               https://cdn-learn.adafruit.com/assets/assets/000/035/630/large1024/microcontrollers_Screen_Shot_2016-09-07_at_11.01.48_PM.png?1473314534 1024w" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 65vw, (max-width: 1365px) 47vw, 750px" src="./Overview _ MicroPython Hardware_ SPI Devices _ Adafruit Learning System_files/microcontrollers_Screen_Shot_2016-09-07_at_11.01.48_PM.png" alt="microcontrollers_Screen_Shot_2016-09-07_at_11.01.48_PM.png">
+<span class="image-expand"><i class="fa fa-search-plus"></i></span>
+</a> </div>
+<div class="row-fluid build-text">
+<p><strong>pyboard note:</strong> On the pyboard the SPI interface currently uses the <strong>recv</strong> function name instead of <strong>read</strong>.</p>
+<p>The <strong>read</strong> function takes one parameter which is the total number of bytes to read from the SPI interface. &nbsp;The board will drive the clock line appropriately and listen for incoming data on the MISO line, then return a byte array with the received data.</p>
+</div>
+<div class="row-fluid build-text">
+<p>An alternate way to read data is with the <strong>readinto</strong> function. &nbsp;This function takes in a buffer of bytes you create ahead of time and will fill the buffer with received data. &nbsp;Using a buffer you create can help save memory and increase performance because MicroPython doesn't have to dynamically create a result buffer&nbsp;like with the read function above.</p>
+<p>For example to use readinto to read the sensor you would run:</p>
+</div>
+<div class="build-code code-element">
+<div class="download-code">
+<i class="fa fa-cloud-download"></i> Download:
+<a data-turbolinks="false" href="https://learn.adafruit.com/pages/8136/elements/1956838/download">
+file
+</a> <div class="code-copy-container">
+<a href="https://learn.adafruit.com/micropython-hardware-spi-devices?view=all#" class="code-copy-button hidden-xs">Copy Code</a>
+</div>
+</div>
+<pre class="code-text-only" style="display: none;">data = bytearray(4)
+cs.low()
+spi.readinto(data)
+cs.high()</pre>
+<pre class="prettyprint
+              
+              linenums
+               prettyprinted" style=""><ol class="linenums"><li class="L0"><span class="pln">data </span><span class="pun">=</span><span class="pln"> bytearray</span><span class="pun">(</span><span class="lit">4</span><span class="pun">)</span></li><li class="L1"><span class="pln">cs</span><span class="pun">.</span><span class="pln">low</span><span class="pun">()</span></li><li class="L2"><span class="pln">spi</span><span class="pun">.</span><span class="pln">readinto</span><span class="pun">(</span><span class="pln">data</span><span class="pun">)</span></li><li class="L3"><span class="pln">cs</span><span class="pun">.</span><span class="pln">high</span><span class="pun">()</span></li></ol></pre>
+</div>
+<div class="row-fluid build-image">
+<a href="https://learn.adafruit.com/assets/35626">
+<img class="35626-asset img-responsive" srcset="https://cdn-learn.adafruit.com/assets/assets/000/035/626/medium260/microcontrollers_Screen_Shot_2016-09-07_at_10.57.37_PM.png?1473314278 260w,
+               https://cdn-learn.adafruit.com/assets/assets/000/035/626/medium640/microcontrollers_Screen_Shot_2016-09-07_at_10.57.37_PM.png?1473314278 640w,
+               https://cdn-learn.adafruit.com/assets/assets/000/035/626/medium800/microcontrollers_Screen_Shot_2016-09-07_at_10.57.37_PM.png?1473314278 800w,
+               https://cdn-learn.adafruit.com/assets/assets/000/035/626/large1024/microcontrollers_Screen_Shot_2016-09-07_at_10.57.37_PM.png?1473314278 1024w" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 65vw, (max-width: 1365px) 47vw, 750px" src="./Overview _ MicroPython Hardware_ SPI Devices _ Adafruit Learning System_files/microcontrollers_Screen_Shot_2016-09-07_at_10.57.37_PM.png" alt="microcontrollers_Screen_Shot_2016-09-07_at_10.57.37_PM.png">
+<span class="image-expand"><i class="fa fa-search-plus"></i></span>
+</a> </div>
+<div class="row-fluid build-text">
+<p><strong>micro:bit note:</strong> The micro:bit doesn't currently support the readinto function, instead you'll have to use read.</p>
+<p>If you're reading SPI data continually in a loop consider using readinto instead of read. &nbsp;By creating and managing the buffer of received data yourself it can speed up the program and reduce memory usage.</p>
+<p>Now that the data is received you can run the following commands to print out its value in hexadecimal:</p>
+</div>
+<div class="build-code code-element">
+<div class="download-code">
+<i class="fa fa-cloud-download"></i> Download:
+<a data-turbolinks="false" href="https://learn.adafruit.com/pages/8136/elements/1956841/download">
+file
+</a> <div class="code-copy-container">
+<a href="https://learn.adafruit.com/micropython-hardware-spi-devices?view=all#" class="code-copy-button hidden-xs">Copy Code</a>
+</div>
+</div>
+<pre class="code-text-only" style="display: none;">import ubinascii
+ubinascii.hexlify(data)</pre>
+<pre class="prettyprint
+              
+              linenums
+               prettyprinted" style=""><ol class="linenums"><li class="L0"><span class="kwd">import</span><span class="pln"> ubinascii</span></li><li class="L1"><span class="pln">ubinascii</span><span class="pun">.</span><span class="pln">hexlify</span><span class="pun">(</span><span class="pln">data</span><span class="pun">)</span></li></ol></pre>
+</div>
+<div class="row-fluid build-image">
+<a href="https://learn.adafruit.com/assets/35627">
+<img class="35627-asset img-responsive" srcset="https://cdn-learn.adafruit.com/assets/assets/000/035/627/medium260/microcontrollers_Screen_Shot_2016-09-07_at_10.58.28_PM.png?1473314334 260w,
+               https://cdn-learn.adafruit.com/assets/assets/000/035/627/medium640/microcontrollers_Screen_Shot_2016-09-07_at_10.58.28_PM.png?1473314334 640w,
+               https://cdn-learn.adafruit.com/assets/assets/000/035/627/medium800/microcontrollers_Screen_Shot_2016-09-07_at_10.58.28_PM.png?1473314334 800w,
+               https://cdn-learn.adafruit.com/assets/assets/000/035/627/large1024/microcontrollers_Screen_Shot_2016-09-07_at_10.58.28_PM.png?1473314334 1024w" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 65vw, (max-width: 1365px) 47vw, 750px" src="./Overview _ MicroPython Hardware_ SPI Devices _ Adafruit Learning System_files/microcontrollers_Screen_Shot_2016-09-07_at_10.58.28_PM.png" alt="microcontrollers_Screen_Shot_2016-09-07_at_10.58.28_PM.png">
+<span class="image-expand"><i class="fa fa-search-plus"></i></span>
+</a> </div>
+<div class="row-fluid build-text">
+<p>This will print the 4 received bytes as a hex string, like:</p>
+<p class="p1"><strong><span class="s1">b'016c17e0'</span></strong></p>
+<p class="p1"><span class="s1">If you only see zeros make sure the MAX31855 is connected exactly as shown above. &nbsp;Most likely the MISO line is not connected, or the MAX31855 isn't powered up.</span></p>
+<p class="p1"><span class="s1">The read and readinto functions are all you really need to read SPI data with MicroPython. &nbsp;After reading the raw data it's up to you to interpret it appropriately. &nbsp;</span></p>
+<p class="p1"><span class="s1">For the MAX31855 <a href="https://cdn-shop.adafruit.com/datasheets/MAX31855.pdf">its&nbsp;datasheet</a> specifies the format of the received 32 bits and how to get the thermocouple temperature out of them. &nbsp;You can actually make a helper function to do this conversion from the raw data:</span></p>
+</div>
+<div class="build-code code-element">
+<div class="download-code">
+<i class="fa fa-cloud-download"></i> Download:
+<a data-turbolinks="false" href="https://learn.adafruit.com/pages/8136/elements/1956844/download">
+file
+</a> <div class="code-copy-container">
+<a href="https://learn.adafruit.com/micropython-hardware-spi-devices?view=all#" class="code-copy-button hidden-xs">Copy Code</a>
+</div>
+</div>
+<pre class="code-text-only" style="display: none;">def temp_c(data):
+    temp = data[0] &lt;&lt; 8 | data[1]
+    if temp &amp; 0x0001:
+        return float('NaN')  # Fault reading data.
+    temp &gt;&gt;= 2
+    if temp &amp; 0x2000:
+        temp -= 16384  # Sign bit set, take 2's compliment.
+    return temp * 0.25</pre>
+<pre class="prettyprint
+              
+              linenums
+               prettyprinted" style=""><ol class="linenums"><li class="L0"><span class="kwd">def</span><span class="pln"> temp_c</span><span class="pun">(</span><span class="pln">data</span><span class="pun">):</span></li><li class="L1"><span class="pln">    temp </span><span class="pun">=</span><span class="pln"> data</span><span class="pun">[</span><span class="lit">0</span><span class="pun">]</span><span class="pln"> </span><span class="pun">&lt;&lt;</span><span class="pln"> </span><span class="lit">8</span><span class="pln"> </span><span class="pun">|</span><span class="pln"> data</span><span class="pun">[</span><span class="lit">1</span><span class="pun">]</span></li><li class="L2"><span class="pln">    </span><span class="kwd">if</span><span class="pln"> temp </span><span class="pun">&amp;</span><span class="pln"> </span><span class="lit">0x0001</span><span class="pun">:</span></li><li class="L3"><span class="pln">        </span><span class="kwd">return</span><span class="pln"> </span><span class="kwd">float</span><span class="pun">(</span><span class="str">'NaN'</span><span class="pun">)</span><span class="pln">  </span><span class="com"># Fault reading data.</span></li><li class="L4"><span class="pln">    temp </span><span class="pun">&gt;&gt;=</span><span class="pln"> </span><span class="lit">2</span></li><li class="L5"><span class="pln">    </span><span class="kwd">if</span><span class="pln"> temp </span><span class="pun">&amp;</span><span class="pln"> </span><span class="lit">0x2000</span><span class="pun">:</span></li><li class="L6"><span class="pln">        temp </span><span class="pun">-=</span><span class="pln"> </span><span class="lit">16384</span><span class="pln">  </span><span class="com"># Sign bit set, take 2's compliment.</span></li><li class="L7"><span class="pln">    </span><span class="kwd">return</span><span class="pln"> temp </span><span class="pun">*</span><span class="pln"> </span><span class="lit">0.25</span></li></ol></pre>
+</div>
+<div class="row-fluid build-image">
+<a href="https://learn.adafruit.com/assets/35628">
+<img class="35628-asset img-responsive" srcset="https://cdn-learn.adafruit.com/assets/assets/000/035/628/medium260/microcontrollers_Screen_Shot_2016-09-07_at_11.00.04_PM.png?1473314429 260w,
+               https://cdn-learn.adafruit.com/assets/assets/000/035/628/medium640/microcontrollers_Screen_Shot_2016-09-07_at_11.00.04_PM.png?1473314429 640w,
+               https://cdn-learn.adafruit.com/assets/assets/000/035/628/medium800/microcontrollers_Screen_Shot_2016-09-07_at_11.00.04_PM.png?1473314429 800w,
+               https://cdn-learn.adafruit.com/assets/assets/000/035/628/large1024/microcontrollers_Screen_Shot_2016-09-07_at_11.00.04_PM.png?1473314429 1024w" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 65vw, (max-width: 1365px) 47vw, 750px" src="./Overview _ MicroPython Hardware_ SPI Devices _ Adafruit Learning System_files/microcontrollers_Screen_Shot_2016-09-07_at_11.00.04_PM.png" alt="microcontrollers_Screen_Shot_2016-09-07_at_11.00.04_PM.png">
+<span class="image-expand"><i class="fa fa-search-plus"></i></span>
+</a> </div>
+<div class="row-fluid build-text">
+<p>This function just pulls out the 14 bits of signed temperature data from the received bytes. &nbsp;It also checks if a fault bit is set and returns a 'not a number' result to indicate a problem.</p>
+<p>Now try calling the temp_c function on the previously received data:</p>
+</div>
+<div class="build-code code-element">
+<div class="download-code">
+<i class="fa fa-cloud-download"></i> Download:
+<a data-turbolinks="false" href="https://learn.adafruit.com/pages/8136/elements/1956847/download">
+file
+</a> <div class="code-copy-container">
+<a href="https://learn.adafruit.com/micropython-hardware-spi-devices?view=all#" class="code-copy-button hidden-xs">Copy Code</a>
+</div>
+</div>
+<pre class="code-text-only" style="display: none;">temp_c(data)</pre>
+<pre class="prettyprint
+              
+              linenums
+               prettyprinted" style=""><ol class="linenums"><li class="L0"><span class="pln">temp_c</span><span class="pun">(</span><span class="pln">data</span><span class="pun">)</span></li></ol></pre>
+</div>
+<div class="row-fluid build-image">
+<a href="https://learn.adafruit.com/assets/35629">
+<img class="35629-asset img-responsive" srcset="https://cdn-learn.adafruit.com/assets/assets/000/035/629/medium260/microcontrollers_Screen_Shot_2016-09-07_at_11.00.42_PM.png?1473314466 260w,
+               https://cdn-learn.adafruit.com/assets/assets/000/035/629/medium640/microcontrollers_Screen_Shot_2016-09-07_at_11.00.42_PM.png?1473314466 640w,
+               https://cdn-learn.adafruit.com/assets/assets/000/035/629/medium800/microcontrollers_Screen_Shot_2016-09-07_at_11.00.42_PM.png?1473314466 800w,
+               https://cdn-learn.adafruit.com/assets/assets/000/035/629/large1024/microcontrollers_Screen_Shot_2016-09-07_at_11.00.42_PM.png?1473314466 1024w" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 65vw, (max-width: 1365px) 47vw, 750px" src="./Overview _ MicroPython Hardware_ SPI Devices _ Adafruit Learning System_files/microcontrollers_Screen_Shot_2016-09-07_at_11.00.42_PM.png" alt="microcontrollers_Screen_Shot_2016-09-07_at_11.00.42_PM.png">
+<span class="image-expand"><i class="fa fa-search-plus"></i></span>
+</a> </div>
+<div class="row-fluid build-text">
+<p>You should see a temperature in degrees Celsius printed!</p>
+<p>Try holding the thermocouple tip with your hand and taking another reading (remember toggle the CS line low, then read 4 bytes, and toggle CS back high), then print the result with the temp_c function again. &nbsp;You should see a higher temperature from your hand heating the thermocouple!</p>
+</div>
+<div class="row-fluid build-text">
+<h1>
+<div class="anchor-anchor">
+<a href="https://learn.adafruit.com/micropython-hardware-spi-devices?view=all#write-and-transfer-spi-data-2-36" class="anchor-link"><span class="fa fa-link"></span></a><span id="write-and-transfer-spi-data-2-36" class="anchor-link-target"></span><span id="write-and-transfer-spi-data-2-36" class="anchor-link-target"></span>
+</div>Write &amp; Transfer SPI Data</h1>
+<p>You can write SPI data using the <strong>write</strong> and <strong>write_readinto</strong> functions on the SPI interface object. &nbsp;The MAX31855 doesn't actually read&nbsp;any data written over SPI&nbsp;(it has no data input line!), but for completeness you can see how to write SPI data below.</p>
+<p>To simply write out an array of bytes send them to the <strong>write</strong> function on the SPI interface:</p>
+</div>
+<div class="build-code code-element">
+<div class="download-code">
+<i class="fa fa-cloud-download"></i> Download:
+<a data-turbolinks="false" href="https://learn.adafruit.com/pages/8136/elements/1956851/download">
+file
+</a> <div class="code-copy-container">
+<a href="https://learn.adafruit.com/micropython-hardware-spi-devices?view=all#" class="code-copy-button hidden-xs">Copy Code</a>
+</div>
+</div>
+<pre class="code-text-only" style="display: none;">spi.write(b'1234')</pre>
+<pre class="prettyprint
+              
+              linenums
+               prettyprinted" style=""><ol class="linenums"><li class="L0"><span class="pln">spi</span><span class="pun">.</span><span class="pln">write</span><span class="pun">(</span><span class="pln">b</span><span class="str">'1234'</span><span class="pun">)</span></li></ol></pre>
+</div>
+<div class="row-fluid build-text">
+<p><strong>pyboard note:</strong> On the pyboard the SPI interface currently uses the <strong>send</strong> function name instead of <strong>write</strong>.</p>
+<p>This will write the 4 byte string '1234' (actually the ASCII byte values of each character) out the MOSI line of the board (GPIO13 on the ESP8266).</p>
+<p>You can also write data while at the same time reading data from the MISO line. &nbsp;This operation is sometimes called a 'transfer' in the SPI protocol and MicroPython implements it with the <strong>write_readinto</strong> function. &nbsp;For example to write a 4 byte string and read 4 bytes at the same time you can call:</p>
+</div>
+<div class="build-code code-element">
+<div class="download-code">
+<i class="fa fa-cloud-download"></i> Download:
+<a data-turbolinks="false" href="https://learn.adafruit.com/pages/8136/elements/1956853/download">
+file
+</a> <div class="code-copy-container">
+<a href="https://learn.adafruit.com/micropython-hardware-spi-devices?view=all#" class="code-copy-button hidden-xs">Copy Code</a>
+</div>
+</div>
+<pre class="code-text-only" style="display: none;">data = bytearray(4)
+spi.write_readinto(b'1234', data)</pre>
+<pre class="prettyprint
+              
+              linenums
+               prettyprinted" style=""><ol class="linenums"><li class="L0"><span class="pln">data </span><span class="pun">=</span><span class="pln"> bytearray</span><span class="pun">(</span><span class="lit">4</span><span class="pun">)</span></li><li class="L1"><span class="pln">spi</span><span class="pun">.</span><span class="pln">write_readinto</span><span class="pun">(</span><span class="pln">b</span><span class="str">'1234'</span><span class="pun">,</span><span class="pln"> data</span><span class="pun">)</span></li></ol></pre>
+</div>
+<div class="row-fluid build-text">
+<p><strong>pyboard note:</strong> On the pyboard the SPI interface uses the <strong>send_recv</strong> function which returns data like the <strong>read</strong>/<strong>recv</strong> function instead of populating a buffer.</p>
+<p>This will write the same 4 byte string '1234' out the MOSI line, while at the same time reading data on the MISO line and saving it into the provided buffer.</p>
+<p>That's all there is to writing SPI data with MicroPython!</p>
+</div>
+</div>
+</div>
+<div class="page-title-wrapper">
+<h1 class="headline">
+<span id="spi-slave">SPI Slave</span>
+</h1>
+<div class="author">by
+<a href="https://learn.adafruit.com/users/tdicola">
+<span class="name">Tony DiCola</span>
+</a> </div>
+</div>
+<div class="page-content all-page-view-content">
+<div class="">
+<div class="element row-fluid build-alert alert-danger">
+<div class="alert">
+<i class="fa fa-exclamation-circle"></i>
+<span class="alert-content">The examples in this guide are no longer supported and may not work. We are only supporting CircuitPython on our boards. For more information about using CircuitPython, check out the CircuitPython Essentials: <a href="https://learn.adafruit.com/circuitpython-essentials/circuitpython-essentials">https://learn.adafruit.com/circuitpython-essentials/circuitpython-essentials</a></span>
+</div>
+</div>
+<div class="row-fluid build-text">
+<p>SPI slave device support allows a board to act as a device that's controlled by a SPI master. &nbsp;This is handy if you&nbsp;need&nbsp;a device to look like a SPI peripheral, or if you want to control multiple devices from one master device. &nbsp;Each device can act as a SPI slave and the master can send and receive data with them as necessary.</p>
+<p>In MicroPython SPI slave support is still in development for some boards. &nbsp;The ESP8266 port in particular does not currently support SPI slave mode. &nbsp;This guide won't go into detail about SPI slave support, instead <a href="https://learn.adafruit.com/micropython-basics-what-is-micropython/overview?view=all#faq-10">check your board's documentation</a> to see if it has SPI slave support and learn about its usage.</p>
+</div>
+</div>
+</div>
+<span class="page-last-updated">
+This guide was first published on Sep 09, 2016. It was last
+updated on Sep 09, 2016.
+</span>
+</div>
+<div class="sidebar-right-wrapper">
+<div class="sidebar-right-content">
+<div class="featured-products">
+<div class="product-wrapper">
+<a href="https://www.adafruit.com/product/269">
+<div class="product-image">
+<img src="./Overview _ MicroPython Hardware_ SPI Devices _ Adafruit Learning System_files/269-04.jpg" alt="" height="233" class="img-responsive" data-error="/assets/missing%2Fmissing.png">
+</div>
+<div class="product-details">
+<div class="product-title">Thermocouple Amplifier MAX31855 breakout board (MAX6675 upgrade)</div>
+<span class="product-price">$14.95</span>
+</div>
+</a> <div class="product-purchase-link">
+<a id="269-product" class="product-buy btn-primary " data-pid="269" data-qty="1" data-name="Thermocouple Amplifier MAX31855 breakout board (MAX6675 upgrade)" href="https://www.adafruit.com/product/269">Add to Cart</a>
+</div>
+</div>
+<div class="product-wrapper">
+<a href="https://www.adafruit.com/product/270">
+<div class="product-image">
+<img src="./Overview _ MicroPython Hardware_ SPI Devices _ Adafruit Learning System_files/270-02.jpg" alt="" height="233" class="img-responsive" data-error="/assets/missing%2Fmissing.png">
+</div>
+<div class="product-details">
+<div class="product-title">Thermocouple Type-K Glass Braid Insulated</div>
+<span class="product-price"></span>
+</div>
+</a> <div class="product-purchase-link">
+<a id="270-product" class="notify product-buy btn-primary " data-pid="270" data-qty="1" data-name="Thermocouple Type-K Glass Braid Insulated" href="https://www.adafruit.com/product/270">Out of Stock</a>
+</div>
+</div>
+<div class="product-wrapper">
+<a href="https://www.adafruit.com/product/2390">
+<div class="product-image">
+<img src="./Overview _ MicroPython Hardware_ SPI Devices _ Adafruit Learning System_files/2390-06.jpg" alt="" height="233" class="img-responsive" data-error="/assets/missing%2Fmissing.png">
+</div>
+<div class="product-details">
+<div class="product-title">MicroPython pyboard</div>
+<span class="product-price">$44.95</span>
+</div>
+</a> <div class="product-purchase-link">
+<a id="2390-product" class="product-buy btn-primary " data-pid="2390" data-qty="1" data-name="MicroPython pyboard" href="https://www.adafruit.com/product/2390">Add to Cart</a>
+</div>
+</div>
+<div class="product-wrapper">
+<a href="https://www.adafruit.com/product/2821">
+<div class="product-image">
+<img src="./Overview _ MicroPython Hardware_ SPI Devices _ Adafruit Learning System_files/2821-05.jpg" alt="" height="233" class="img-responsive" data-error="/assets/missing%2Fmissing.png">
+</div>
+<div class="product-details">
+<div class="product-title">Adafruit Feather HUZZAH with ESP8266 - Loose Headers</div>
+<span class="product-price">$16.95</span>
+</div>
+</a> <div class="product-purchase-link">
+<a id="2821-product" class="product-buy btn-primary " data-pid="2821" data-qty="1" data-name="Adafruit Feather HUZZAH with ESP8266 - Loose Headers" href="https://www.adafruit.com/product/2821">Add to Cart</a>
+</div>
+</div>
+<div class="product-wrapper">
+<a href="https://www.adafruit.com/product/2471">
+<div class="product-image">
+<img src="./Overview _ MicroPython Hardware_ SPI Devices _ Adafruit Learning System_files/2471-10.jpg" alt="" height="233" class="img-responsive" data-error="/assets/missing%2Fmissing.png">
+</div>
+<div class="product-details">
+<div class="product-title">Adafruit HUZZAH ESP8266 Breakout</div>
+<span class="product-price">$9.95</span>
+</div>
+</a> <div class="product-purchase-link">
+<a id="2471-product" class="product-buy btn-primary " data-pid="2471" data-qty="1" data-name="Adafruit HUZZAH ESP8266 Breakout" href="https://www.adafruit.com/product/2471">Add to Cart</a>
+</div>
+</div>
+<div class="product-wrapper">
+<a href="https://www.adafruit.com/product/3184">
+<div class="product-image">
+<img src="./Overview _ MicroPython Hardware_ SPI Devices _ Adafruit Learning System_files/3184-00.jpg" alt="" height="233" class="img-responsive" data-error="/assets/missing%2Fmissing.png">
+</div>
+<div class="product-details">
+<div class="product-title">WiPy 1.0 - IoT Development Platform</div>
+<span class="product-price">$33.95</span>
+</div>
+</a> <div class="product-purchase-link">
+<a id="3184-product" class="product-buy btn-primary " data-pid="3184" data-qty="1" data-name="WiPy 1.0 - IoT Development Platform" href="https://www.adafruit.com/product/3184">Add to Cart</a>
+</div>
+</div>
+<div class="product-wrapper">
+<a href="https://www.adafruit.com/product/2756">
+<div class="product-image">
+<img src="./Overview _ MicroPython Hardware_ SPI Devices _ Adafruit Learning System_files/2756-00.jpg" alt="" height="233" class="img-responsive" data-error="/assets/missing%2Fmissing.png">
+</div>
+<div class="product-details">
+<div class="product-title">Teensy 3.2 + header</div>
+<span class="product-price">$19.95</span>
+</div>
+</a> <div class="product-purchase-link">
+<a id="2756-product" class="product-buy btn-primary " data-pid="2756" data-qty="1" data-name="Teensy 3.2 + header" href="https://www.adafruit.com/product/2756">Add to Cart</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<div class="readable">
+<div class="related-guides-wrapper">
+<div class="guide-group-preview">
+<div class="group-preview-header">
+<h3>
+Related Guides
+</h3>
+</div>
+<div class="guide-group">
+<div class="guide-preview">
+<div class="image-container">
+<a href="https://learn.adafruit.com/micropython-basics-how-to-load-micropython-on-a-board">
+<img class="image-preview" data-error="/assets/missing%2Fmissing.png" src="./Overview _ MicroPython Hardware_ SPI Devices _ Adafruit Learning System_files/IMG_5115.jpg">
+<div class="tagline">
+Learn how to load MicroPython firmware on a development board.
+</div>
+</a>  </div>
+<div class="title">
+<a href="https://learn.adafruit.com/micropython-basics-how-to-load-micropython-on-a-board">
+MicroPython Basics: How to Load MicroPython on a Board
+</a> </div>
+<div class="author">by
+<a href="https://learn.adafruit.com/users/tdicola">
+<span class="name">Tony DiCola</span>
+</a> </div>
+</div>
+<div class="guide-preview">
+<div class="image-container">
+<a href="https://learn.adafruit.com/circuitpython-libraries-on-linux-and-the-96boards-dragonboard-410c">
+<img class="image-preview" data-error="/assets/missing%2Fmissing.png" src="./Overview _ MicroPython Hardware_ SPI Devices _ Adafruit Learning System_files/sensors_blinkapi.png">
+<div class="tagline">
+Make hardware and interface with sensors super easy using CircuitPython
+</div>
+</a> </div>
+<div class="title">
+<a href="https://learn.adafruit.com/circuitpython-libraries-on-linux-and-the-96boards-dragonboard-410c">
+CircuitPython Libraries on Linux and the 96Boards DragonBoard 410c
+</a> </div>
+<div class="author">by
+<a href="https://learn.adafruit.com/users/MakerMelissa">
+<span class="name">M. LeBlanc-Williams</span>
+</a> </div>
+</div>
+<div class="guide-preview">
+<div class="image-container">
+<a href="https://learn.adafruit.com/adafruit-io-basics-digital-output">
+<video class="video-preview" preload="auto" muted="muted" loop="loop" autoplay="autoplay" playsinline="" data-error="/assets/missing%2Fmissing.png">
+<source src="https://cdn-learn.adafruit.com/guides/cropped_images/000/000/998/medium640mp4/P1040260.mp4?1520547382">
+<source src="https://cdn-learn.adafruit.com/guides/cropped_images/000/000/998/medium640webm/P1040260.webm?1520547382" type="video/webm; codecs=vp8,vorbis">
+Your browser does not support the video tag.
+</video>
+<div class="tagline">
+Turn on a LED or lamp from anywhere!
+</div>
+</a> </div>
+<div class="title">
+<a href="https://learn.adafruit.com/adafruit-io-basics-digital-output">
+Adafruit IO Basics: Digital Output
+</a> </div>
+<div class="author">by
+<a href="https://learn.adafruit.com/users/jwcooper">
+<span class="name">Justin Cooper</span>
+</a> </div>
+</div>
+<div class="guide-preview">
+<div class="image-container">
+<a href="https://learn.adafruit.com/using-ifttt-with-adafruit-io">
+<video class="video-preview" preload="auto" muted="muted" loop="loop" autoplay="autoplay" playsinline="" data-error="/assets/missing%2Fmissing.png">
+<source src="https://cdn-learn.adafruit.com/guides/cropped_images/000/001/118/medium640mp4/door.mp4?1520543577">
+<source src="https://cdn-learn.adafruit.com/guides/cropped_images/000/001/118/medium640webm/door.webm?1520543577" type="video/webm; codecs=vp8,vorbis">
+Your browser does not support the video tag.
+</video>
+<div class="tagline">
+Know who is comin' and goin'
+</div>
+</a> </div>
+<div class="title">
+<a href="https://learn.adafruit.com/using-ifttt-with-adafruit-io">
+Using IFTTT with Adafruit IO to Make an IoT Door Detector
+</a> </div>
+<div class="author">by
+<a href="https://learn.adafruit.com/users/uniontownlabs">
+<span class="name">Todd Treece</span>
+</a> </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="footer-spacer"></div>
+</div>
+<div class="modal fade" id="notify-modal">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<a href="https://learn.adafruit.com/micropython-hardware-spi-devices?view=all#" class="close" data-dismiss="modal">×</a>
+<h5>OUT OF STOCK NOTIFICATION</h5>
+</div>
+<div class="modal-body">
+<p class="notify-modal-form-header"></p>
+<div class="notify-modal-products"></div>
+<form id="notify-modal-form" name="back_in_stock_notification">
+<p class="notify-modal-form-notice"></p>
+<div class="notify-modal-break"></div>
+<div class="form-group">
+<label class="inputLabel" for="name">YOUR NAME</label>
+<input type="text" size="25" maxlength="64" name="name" value="">
+</div>
+<div class="form-group">
+<label class="inputLabel" for="email">YOUR EMAIL</label>
+<input type="email" size="25" maxlength="96" name="email" value="">
+</div>
+<input type="hidden" name="notify_me" value="true">
+</form>
+<div id="notify-modal-success" style="display:none">
+<p>You have been successfully subscribed to the Notification List for this product and will therefore receive an e-mail from us when it is back in stock!</p>
+<p>For security reasons, an e-mail has been sent to you acknowledging your subscription. Please remember that this subscription will not result in you receiving any e-mail from us about anything other than the restocking of this item.</p>
+<p>If, for any reason, you would like to unsubscribe from the Notification List for this product you will find details of how to do so in the e-mail that has just been sent to you!</p>
+</div>
+</div>
+<div class="modal-footer">
+<a href="https://learn.adafruit.com/micropython-hardware-spi-devices?view=all#" id="close-notify" style="display: none" data-dismiss="modal" data-target="#notify-modal">CLOSE</a>
+<a href="https://learn.adafruit.com/micropython-hardware-spi-devices?view=all#" id="submit-notify" rel="nofollow" class="blue-button">NOTIFY ME</a>
+</div>
+</div>
+</div>
+</div>
+<div id="remote-modal"></div>
+</div>
+<footer id="adafruit-footer">
+<div id="footer-content">
+<div class="row">
+<div class=" col-lg-6 col-md-6 col-sm-4 col-xs-12">
+<nav>
+<ul>
+<li><a href="https://www.adafruit.com/contact_us">CONTACT</a></li>
+<li><a href="https://www.adafruit.com/support">SUPPORT</a>
+</li><li><a href="https://www.adafruit.com/distributors">DISTRIBUTORS</a></li>
+<li><a href="https://www.adafruit.com/educators">EDUCATORS</a></li>
+<li><a href="https://jobs.adafruit.com/">JOBS</a></li>
+<li><a href="https://www.adafruit.com/faq">FAQ</a></li>
+<li><a href="https://www.adafruit.com/shippinginfo/">SHIPPING &amp; RETURNS</a></li>
+<li><a href="https://www.adafruit.com/terms_of_service/">TERMS OF SERVICE</a></li>
+<li><a href="https://www.adafruit.com/privacy">PRIVACY &amp; LEGAL</a></li>
+<li><a href="https://www.adafruit.com/about">ABOUT US</a></li>
+</ul>
+</nav>
+<div id="footer-copyright">
+<a href="http://nytm.org/made-in-nyc/">ENGINEERED IN NYC</a> <span>Adafruit&nbsp;®</span>
+</div>
+</div>
+<div class="col-lg-6 col-md-6 col-sm-8 hidden-xs">
+<div id="footer-quote" class="long-quote">
+"There are three things to remember when teaching: know your stuff; know whom you are stuffing; and then stuff them elegantly"
+<span class="quote-author">- <a href="http://en.wikipedia.org/wiki/Lola_J._May">Lola May</a></span>
+</div>
+</div>
+<div id="footer-seals">
+<img class="img-responsive" src="./Overview _ MicroPython Hardware_ SPI Devices _ Adafruit Learning System_files/seals_2x.jpg">
+</div>
+</div>
+</div>
+</footer>
+</div>
+</div>
+
+
+</body></html>

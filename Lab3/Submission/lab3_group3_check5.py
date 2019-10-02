@@ -139,4 +139,4 @@ while True:
     oled.text('I LOVE IoT', position_x, position_y)
     oled.show()
 
-    time.sleep_ms(20)
+    time.sleep_ms(200)
