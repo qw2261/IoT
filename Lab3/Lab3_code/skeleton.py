@@ -423,6 +423,8 @@ def ringDetect():
                 return True
             else:
                 pwm.deinit()
+                
+    return False
 
 
 
@@ -466,6 +468,7 @@ while True:
     print(alarms[1])
     print(alarms[2])
 
+    ## Ring Works
     ringDetect()
     print('---------------')
 

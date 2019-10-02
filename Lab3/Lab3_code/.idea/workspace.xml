@@ -2,10 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="010c1095-4e8d-437a-ae9f-6a6ff44f5abf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Past Code/test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../IoT.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../IoT.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/skeleton.py" beforeDir="false" afterPath="$PROJECT_DIR$/skeleton.py" afterDir="false" />
     </list>
@@ -16,57 +12,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/adxl345.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="25" column="22" lean-forward="true" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
+    <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Past Code/test.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" column="50" selection-start-line="24" selection-start-column="50" selection-end-line="24" selection-end-column="50" />
-              <folding>
-                <element signature="e#0#14#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lab3_3.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="17" lean-forward="true" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
-              <folding>
-                <element signature="e#0#14#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/skeleton.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="14" />
-              <folding>
-                <element signature="e#0#14#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/spi.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="14" lean-forward="true" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
+            <state relative-caret-position="258">
+              <caret line="425" column="16" selection-start-line="425" selection-start-column="16" selection-end-line="425" selection-end-column="16" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -99,8 +50,8 @@
         <option value="$PROJECT_DIR$/adxl345.py" />
         <option value="$PROJECT_DIR$/lab3_3.py" />
         <option value="$PROJECT_DIR$/spi.py" />
-        <option value="$PROJECT_DIR$/skeleton.py" />
         <option value="$PROJECT_DIR$/Past Code/test.py" />
+        <option value="$PROJECT_DIR$/skeleton.py" />
       </list>
     </option>
   </component>
@@ -114,6 +65,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -121,16 +73,10 @@
               <item name="Lab3_code" type="b2602c69:ProjectViewProjectNode" />
               <item name="Lab3_code" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Lab3_code" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Lab3_code" type="462c0819:PsiDirectoryNode" />
-              <item name="Past Code" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -204,23 +150,14 @@
     </layout-to-restore>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/lab3_check1.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lab3_check3.py">
+    <entry file="file://$PROJECT_DIR$/lab3_check1.py" />
+    <entry file="file://$PROJECT_DIR$/lab3_check3.py" />
+    <entry file="file://$PROJECT_DIR$/lab3_3.py" />
+    <entry file="file://$PROJECT_DIR$/adxl345.py" />
+    <entry file="file://$PROJECT_DIR$/Past Code/test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
-          <folding>
-            <element signature="e#399#430#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lab3_3.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="17" lean-forward="true" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+        <state relative-caret-position="465">
+          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>
@@ -237,27 +174,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/adxl345.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="22" lean-forward="true" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/skeleton.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="14" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Past Code/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="50" selection-start-line="24" selection-start-column="50" selection-end-line="24" selection-end-column="50" />
+        <state relative-caret-position="258">
+          <caret line="425" column="16" selection-start-line="425" selection-start-column="16" selection-end-line="425" selection-end-column="16" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>
