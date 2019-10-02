@@ -21,3 +21,6 @@
 
 ## Lab 3. **Bus Communication: I2C and SPI**
 
+## Hardware SPI bus
+
+The hardware SPI is faster (up to 80Mhz), but only works on following pins: `MISO` is GPIO12, `MOSI` is GPIO13, and `SCK` is GPIO14. It has the same methods as the bitbanging SPI class above, except for the pin parameters for the constructor and init (as those are fixed).

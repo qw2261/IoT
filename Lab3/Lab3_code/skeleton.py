@@ -2,8 +2,11 @@ import machine
 import ssd1306
 from machine import RTC
 from machine import Pin
-import time
 from machine import ADC
+from machine import PWM
+import time
+
+
 
 
 ## I2C and OLED Initialization
@@ -403,12 +406,27 @@ def checkTimeMatch(hour_to_match, minute_to_match, weekday_to_match):
         return True
     return False
 
+pin12 = Pin(12, Pin.OUT)
 def ringDetect():
     global alarms
     for each in alarms:
         if each[3]:
-            checkTimeMatch(each[0], each[1], each[2])
-            return True
+            pwm = PWM(pin12, 1000)
+            if checkTimeMatch(each[0], each[1], each[2]):
+                pwm.duty(100)
+                oled.fill(1)
+                oled.show()
+                time.sleep_ms(500)
+                oled.fill(0)
+                oled.show()
+                print('Ring Now')
+                return True
+            else:
+                pwm.deinit()
+
+
+
+
 
 ## Operator Button Activation
 def buttonAOn(line):
@@ -429,7 +447,7 @@ def buttonCOn(line):
 
 ## Operator Button of Watch
 button_A = Pin(0, Pin.IN, Pin.PULL_UP)
-button_B = Pin(14, Pin.IN, Pin.PULL_UP)
+button_B = Pin(3, Pin.IN, Pin.PULL_UP)
 button_C = Pin(2, Pin.IN, Pin.PULL_UP)
 
 button_A.irq(handler = buttonAOn, trigger = Pin.IRQ_FALLING)
@@ -441,15 +459,14 @@ adc0 = ADC(0)
 
 
 
-prev_time = time.time()
 while True:
     print(button, state)
+    print(rtc.datetime())
     print(alarms[0])
     print(alarms[1])
     print(alarms[2])
-    if time.time() - prev_time > 50:
-        print(ringDetect())
-        prev_time = time.time()
+
+    ringDetect()
     print('---------------')
 
     ## Adjust Lightness Based on Outside Lightness
