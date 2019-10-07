@@ -60,3 +60,13 @@ https://developer.atlassian.com/server/crowd/json-requests-and-responses/
 
 
 http://www.json.org/JSONRequest.html
+
+
+
+
+
+http://mkelsey.com/2013/05/01/authorizing-and-signing-a-twitter-api-call-using-python/
+
+
+
+[https://www.jscape.com/blog/what-is-hmac-and-how-does-it-secure-file-transfers#targetText=HMAC%20stands%20for%20Keyed%2DHashing,is%20specified%20in%20RFC%202104.&targetText=And%20they%20both%20employ%20hash%20functions.](https://www.jscape.com/blog/what-is-hmac-and-how-does-it-secure-file-transfers#targetText=HMAC stands for Keyed-Hashing,is specified in RFC 2104.&targetText=And they both employ hash functions.)
